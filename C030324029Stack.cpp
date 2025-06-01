@@ -19,3 +19,7 @@ void Push(Stack *S, itemType x);
 void InitializeStack(Stack *S){
     S->Count = 0;
 }
+
+int Full(Stack *S){
+    return (S->Count == MAXSTACK);
+}
