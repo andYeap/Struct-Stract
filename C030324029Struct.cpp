@@ -13,16 +13,22 @@ int main(int argc, char const *argv[])
 {
     
     mahasiswa aqshal;
+    mahasiswa *dataAqshal = &aqshal;
     
-    aqshal.nim = "C030324029";
-    aqshal.nama = "Muhammad Aqshal Habibi";
-    aqshal.alamat = "Jl. Teluk Tiram";
-    aqshal.ipk = 4.0;
-
-    cout << aqshal.nim<<"\n";
-    cout << aqshal.nama<<"\n";
-    cout << aqshal.alamat<<"\n";
-    cout << aqshal.ipk<<"\n";
+    system("cls");
+    cout << "Masukkan NIM: ";
+    cin >> dataAqshal->nim;
+    cout << "Masukkan Nama: ";
+    cin >> dataAqshal->nama;
+    cout << "Masukkan Alamat: ";
+    cin >> dataAqshal->alamat;
+    cout << "Masukkan ipk: ";
+    cin >> dataAqshal->ipk;
+    
+    cout << "NIM: " << dataAqshal->nim << endl;
+    cout << "Nama: " << dataAqshal->nama << endl;
+    cout << "Alamat: " << dataAqshal->alamat << endl;
+    cout << "IPK: " << dataAqshal->ipk << endl;
     
     return 0;
 }
