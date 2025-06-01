@@ -15,6 +15,7 @@ int Full(Stack *S);
 int Empty(Stack *S);
 void Pop(Stack *S, itemType *x);
 void Push(Stack *S, itemType x);
+void Display(Stack *S)
 
 void InitializeStack(Stack *S){
     S->Count = 0;
@@ -44,4 +45,15 @@ void Push(Stack *S, itemType x){
         S->Item[S->Count]=x;
         ++(S->Count);
     }
+}
+
+void Display(Stack *S) {
+
+    cout << "Menampilkan data stack" << endl;
+
+    for (int i = (S->Count) - 1; i >= 0; --i)
+    {
+        cout << S->Item[i] << endl;
+    }
+    
 }
