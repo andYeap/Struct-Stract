@@ -17,6 +17,25 @@ void Pop(Stack *S, itemType *x);
 void Push(Stack *S, itemType x);
 void Display(Stack *S)
 
+int main(int argc, char const *argv[])
+{
+    Stack S;
+    itemType x;
+
+    InitializeStack(&S);
+
+    Push(&S, 4);
+    Push(&S, 8);
+    Push(&S, 6);
+    Push(&S, 3);
+    Push(&S, 2);
+    Pop(&S, &x);
+    Display(&S);
+    
+    return 0;
+}
+
+
 void InitializeStack(Stack *S){
     S->Count = 0;
 }
